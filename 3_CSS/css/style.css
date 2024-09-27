@@ -1,0 +1,665 @@
+body {
+   padding-bottom: 500px;
+   background-color: #fff;
+}
+    /* padding: espaçamento inferior */
+h3 {
+    color: green;
+}
+
+/* p {
+    color: blueviolet;
+} */
+
+/* classes */
+/* adicionar a classe coloca o . ponto e o  nome da classe */
+.paragraph {
+    background-color: #000; /* cor de fundo */
+    color: aqua;
+    padding: 5px; /* espaçamento interno */
+}
+
+/* id */
+#exclusive-title {
+    background-color: purple;
+    color: yellow;
+    padding: 10px;
+}
+
+/* ordem das regras */
+/* primeiro id 
+   segundo class 
+   terceiro tag*/
+h2 {
+    border-bottom: 2px solid red;
+}
+
+.titulo {
+    border-bottom: 3px solid blue;
+}
+#algum-titulo {
+    border-bottom: 4px solid green;
+}
+
+/* Nome de cores */
+.color-name {
+    color: crimson;
+}
+
+/* HEX ou Hexadecimal é a abordagem mais utilizado
+   Utiliza 6 digitos , precedidos de uma #; 
+   Os valores vão de 0 a 9 A a F
+   0 é o mais escuro e F o mais claro
+   O valor de #000 é a cor preta e #FFF a cor branca */
+
+.hex {
+    color: #55a398;
+}
+
+.hex-2 {
+    color: #00ffaa;
+}
+
+/* mais sobre hex */
+
+.simple-hex {
+    color: #333;
+}
+
+.simple-hex-2 {
+    color: #a5f;
+}
+
+/* RGB precisa inserir a intensidade
+ de cada com valores de 0 a 255;
+ 0 é o mais escuro e 255 o mais claro;
+ aplicamos o RGB na seguinte sintaxe: rgb(0-255, 0-255, 0-255)
+ o primeiro valor representa o vermelho depois verde por fim azul;
+ para criar a cor verde inserimos: rgb(0, 255, 0);*/
+
+ /* RGB */
+.rgb {
+    color: rgb(255, 0, 0); 
+}
+
+.mixed-rgb {
+    color: rgb(199, 21, 47);
+}
+
+/* RGBA podemos criar cores com o RGBA, A vem de alpa;
+A alteração dele muda a opacidade da cor;
+Os valores possiveis são de 0 a 1;
+Sendo 0 transparente e 1 totalmente visivel;
+A sintaxe é quase a mesma: rgba(0-255, 0-255, 0-255, 0-1) */
+
+/* RGBA */
+.rgba{
+    color: rgba(100, 255, 023, 0.3)
+}
+
+/* hsl */
+.hsl {
+    color: hsl(100, 20%, 50%)
+}
+
+.hsl-2 {
+    color: hsl(202, 74%, 48%);
+}
+
+/* Background */
+.bg {
+    background-color: #333;
+    color: yellow;
+}
+
+.bg-2 {
+    background-color: rgba(200, 20, 40, 0.3);
+    color: #00eaff;
+}
+
+/* Backgroud opacity
+ podemos alterar a opacidade de uma cor de fundo com CSS;
+ a regra é a opacity; 
+ os valores vão de 0 a 1;
+ sendo 1 totalmente visivel e 0 ramove a cor;
+ com esta regra mudamos tambem a opacidade dos elementos 
+ dentro do elemento que alteramos a opacidade, veremos uma
+ solução depois; */
+
+ /* Backgroud opacity */
+.bg-opacity {
+    background-color: green;
+    opacity: 0.2;
+}
+ 
+.bg-opacity-2 {
+    background-color: #999;
+    color: #000;
+    opacity: 0.8;
+}
+
+.rgba-opacity {
+    background-color: rgba(90, 120, 20, 0.2);
+    color: #000;
+}
+
+/* backgroud images 
+  podemosa inserir imagens no backgound dos elementos;
+  a regra é: background-image: url(pasta/imagem.jpg)
+  geralmente a imagem fica em outra pasta, então temos que voltar um diretorio;
+  isso pode ser feito com o símbolo (..)*/
+
+.bg-image {
+    background-image: url(img/nature.jpg);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Centralizar a imagem de background 
+  As vezes a imagem é muito mais que o elemento que estamos inserido
+  entao precisamos melhorar a visualização, centralizando a imagem;
+  isso pode ser feito com duas regras: background_position com o valor de center;
+  e background-size com o valor de cover; */
+
+/* Centralizando bg image */
+.not-centered-bg, 
+.centered-bg {
+    height: 400px; /*Altura*/
+    width: 400px; /*Largura*/
+    background-image: url(img/bridge.jpg);           
+}
+
+.centered-bg {
+    background-position: center;
+    background-size: cover;
+}
+
+/* Box Model 
+  box model é uma entidade que é criada em todo elemento
+  do html;
+  ela consiste em quatro partes: altura e largura, padding, border e margin;
+  todas elas podem ser alteradas por CSS;
+  alguns elementos do html já vem com valor nerstas regras;
+  este conceito é muito importante, veremos em detalhes nas proximas aulas;*/
+
+/* largura e altura */
+.height-width {
+    height: 200px;
+    width: 100px;
+    background-color: #333;    
+}
+
+.height-width-2 {
+    height: 300px;
+    background-color: #333;
+}
+
+/* padding */
+.without-padding,
+.padding {
+    background-color: #111;
+    color: #fff;
+}
+
+.padding {
+    padding: 20px;
+    background-color: #333;
+}
+
+/* Lados individuais  
+  podemos adicionar o padding aos lados individuais de um elemento
+  a regra é: padding-*
+  onde * pode ser: top, left, right ou bottom;
+  assim teremos valores customizados em cada um dos lados do elemento; */
+
+/* padding individual */
+.padding-individual {
+    background-color: #222;
+    color: #fff;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+}
+
+/* Shorthand properties
+ as propriedades de shorthan nos permitem adicionar padding a todas as direções com uma regra
+ apenas precisamos utilizar a regra padding, e configurar top, right, bottom e lefft nesta ordem
+ exemplo: padding 10px 5px 12px 20px 
+ esta regra de shorthan pode ser a aplicada para outras propriedades, como a margin. */
+
+/* shorthand padding */
+.shorthand-padding {
+    background-color: #444;
+    padding: 6px 12px 18px 24px;
+}
+
+.shorthand-padding-2 {
+    background-color: #555;
+    padding: 10px 20px; /* forma resumida e exemplo de como seria em baixo */
+    /* padding: 10px 20px 10px 20px; */
+}
+
+/* padding e widdth  
+  a pandding é adicionada a largura do elemento, e isso pode ser um problema;
+  por exemplo: se precisamos seguir um layout perfeitamente; 
+  um elemento com 200px de width e 25px de padding tem um tamanho total de 250px na horizontal;
+  podemos diminuir a largura do lelmento, mas isso dificulta o calculo tambem;
+  isso pode ser resolvido com a regra box-sizing e o valor de border-box, isso faz o elemento 
+  resteitar o tamanho que está em width;*/
+.without-border-box {
+    background-color: #444;
+    color: #fff;
+    width: 400px;
+    padding: 50px;
+}
+/* resolvendo */
+.border-box {
+    background-color: #666;
+    color: #fff;
+    width: 400px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Border 
+  a borda é o elemento ecentral, fica entre padding e margim;
+  padding é o espacamento interno e margin o extremo;
+  geralmente esta regra é utilizado com proposito decorativo ;
+  a regra de border é definida em algumas partes: tamanho, aspecto e cor da borda; */
+
+/* Border */
+.border {
+    border: 5px solid red;
+    padding: 10px;
+}
+
+.border-2 {
+    border: 2px dotted #931;
+    padding: 10px;
+}
+
+/* lados individuais da border 
+  podemos adicionar borda aos lados especificos de um elemento tambem;
+  podemos utilizar border-* onde * pode ser top, rigth, bottom e left;
+  isso é utilizado freqquentemente, especialmente com a border-bottom e left; */
+
+/*  borda individual */
+.border-left {
+    border-left: 5px solid red;
+    background-color: #222;
+    color: #fff;
+    padding: 25px;
+}
+.border-bottom {
+    border-bottom: 5px solid #399;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Com border-radios podemos arredondar os cantos de um elemento 
+  podendo ser aplicada assim: border-raidos: 5px
+  podemos arredondar elementos que não a regra de borda aplicada*/
+
+.rounded-p {
+    border: 4px solid blue;
+    background-color: #000;
+    color: blue;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* aplicado sem o border */
+.rounded-p-2 {
+    background-color: #000;
+    color: blue;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* Margin 
+  a propriedade de margin é responsavel pelo espaçamento externo do elemento;
+  podemos aplicar o recurso como aplicamos padding
+  ou seja: lados individuais e tambem o shorthand */
+
+/* margim */
+.margin {
+    margin: 10px;
+    background-color: #222;
+}
+
+.margin-top {
+    margin-top: 50px;
+    background-color: #444;
+    padding: 10px;
+}
+
+.margin-shorthand {
+    background-color: #666;
+    margin: 5px 10px 15px 20px;
+}
+
+/* Elementos do box model juntos
+    Em alguns elementos vamos utilizar todos os recursos do boxz model;
+    Ou seja, vamos definir o tamanho (width e height);
+    Um espaçamento interno (padding);
+    Decorar o elemento com bordas (border);
+    Afastar o elçemento de outros (margin); */
+
+/* box model */
+.box-model {
+    margin: 20px;
+    padding: 15px 25px;
+    border: 3px solid #845;
+    border-radius: 7px;
+    width: 200px;
+    height: 300px;
+}
+
+/* Alinhamento de texto
+    Nosso textos podem ser alinhados em varias direções;
+    Por padrão ele é alinhado a esquerda;
+    Porém com a regra text-align configuramos center (centro) ou right (direita),
+    para alterar o valor defalt;
+    Usamos muito o valor de center; */
+
+/* text-alignment */
+.text-alignment {
+    text-align: right;
+}
+
+.container-center {
+    text-align: center;
+    width: 300px;
+    border: 1px solid red;
+}
+
+/* text decoration
+    Com a decoration podemos adicionar efeitos ao texto;
+    É possivel colocar um underline ou até mesmo uma linha que corta o texto;
+    Esta regra é utilizada em casos especificos;
+    A tag 'a' tem um underline por padrão, podemos remover isso com a regra de
+    text-decoration e o valor de 'none'; */
+
+/* Text decoration */
+.underline {
+    text-decoration: underline; /* Adiciona underline*/
+}
+
+.line-trough {
+    text-decoration: line-through; /* Adiciona um risco */
+}
+
+.remouve-underline {
+    text-decoration: none; /* Remove o underline */
+}
+
+/* Transformação de texto
+    Com a regra text-transform podemos alterar como o texto é exibido;
+    É possivel alterar para uppercase ou lowercase (letras maiúsculas ouminusculas);
+    Não há muitos valores para esta regra;
+    Coisado: o CSS deve ser aplicado quando queremosa texto em ppercase,
+    nunca escreva o texto com capslock no HTML; */
+
+/* text-transform */
+.upper {
+    text-transform: uppercase; /* Transforma o texto em maiusculo */
+}
+
+.lower {
+    text-transform: lowercase; /* Transforma o texto  em minusculo */
+}
+
+/* Espaçamento de letras
+    Com a regra letter-spacing podemos alterar o espaçamento entre letras de um
+    texto;
+    Isso é interessante em situações que o layout pede esta mudança;
+    A regra ´re aplicada da seguinte maneira letter-spacing: 5px; */
+
+/* letter-spacing */
+.spacing {
+    letter-spacing: 5px; /* Espacamento entre as letras */
+}
+
+/*  Fontes
+    Com CSS podemos alterar o tipo da fonte, com a regra font-family;
+    As regras disponiveis são: Swrif, Sans-serif, Monospace, Cursive e Fantasy;
+    Todos os navegadores tem várias fontes que podemos utilizar;
+    E ainda podemos adicionar fontes externas, por exemplo com o Google Fonts; */
+
+/* Fontes */
+.serif {
+    font-family: serif;
+}
+
+.sans-serif {
+    font-family: sans-serif;
+}
+
+.monospace {
+    font-style: "Courier New";
+}
+
+.cursive {
+    font-family: cursive;
+}
+
+.fantasy {
+    font-family: fantasy;
+}
+
+/* Tex style */
+.italic {
+    font-style: italic;
+}
+
+.oblique {
+    font-style: oblique;
+}
+
+/* Font size 
+    A regra de font-size é responsável por deixar nossa
+    fonte grande ou pequena;
+    Quanto menor o valor, menor a fonte e vice-versa;
+    Esta regra é configurada com unidade de medida, como o px;
+    Em CSS temos diversas unidades;  */
+
+/* font size */
+.small {
+    font-size: 6px; /* TItulo fica pequeno */
+}
+
+.big {
+    font-size: 78px; /* Titulo grande */
+}
+
+/* Display  
+    Em HTML e CSS temos alguns elementos que são considerados de bloco 
+    e inline; 
+    A tag div é um exemplo de block e span um exemplo de inline;
+    Com a regra display podemos mudar esta comportamento, ou seja, deixar 
+    uma div como inline; */
+
+/* Display */
+.inline-box {
+    width: 50px;
+    height: 50px;
+    background-color: #4f8;
+    display: inline-block; /* deixa os elementos em linha */
+}
+
+.block {
+    background-color: #333;
+    display: block; /* deixa funcionando como divs/ faz quebra de linha */
+    margin: 10px;
+}
+
+/* Escondendo elementos 
+    Existem situaçõs que precisamos ocultar elementos; 
+    Basta adicionar a regra display com o valor de none;
+    Então o elemento não é mais exibido, porém ainda consta no HTML; */
+
+/* escondendo elementos */
+.invisible {
+    display: none;
+}
+
+/* static */
+.static {
+    position: static;
+    background-color: #391;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+}
+
+/* relative */
+.relative {
+    position: relative;
+    background-color: #224;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 40px;
+}
+
+/* Position absolute 
+    Com o valor absolute em position, o elemento pode ser movido pela tela 
+    toda; 
+    Ou seja, quebramos o fluxo do HTML;
+    Esta regra também é afetada por top, left, right e bottom;
+    Posicionar com absolute pode ser uma solução ou um problema, dependendo 
+    do ponto de vista; 
+*/
+
+/* Absolute */
+.absolute {
+    position: absolute;
+    background-color: #964;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    top: 2px;
+    right: 2px;
+}
+
+/* Relative com absolute
+    Podemos resolver o problema de absolute com relative;
+    Um elemento com position absolute é ligado ao elemento
+    mais proximo com posição relativa, se não ele é ligado
+    ao body; 
+    Então com o container com posição relative, podemos controlar 
+    melhor a área de ação dos elementos com absolute; 
+*/
+
+/* Absolute e relative */
+.relative-container {
+     width: 300px;
+     height: 300px;
+     border: 1px solid red;
+     margin-top: 120px;
+     position: relative;
+}
+
+.absolute-1,
+.absolute-2 {
+    width: 50px;
+    height: 50px;
+    background-color: #422;
+    position: absolute;
+}
+
+.absolute-1 {
+    top: 10px;
+    left: 10px;
+}
+
+.absolute-2 {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Position fixed
+    Com fixed o elemento pode ser fixado na tela;
+    Mesmo após o scroll na página, o elemento permanece na mesma posição, 
+    estado sempre presente;
+    O rescurso é frequentemente utilizado para criar barra de navegação fixa; 
+*/
+
+/* Position fixed */
+.fixed {
+    width: 100px;
+    height: 100px;
+    background-color: #851;
+    border: 1px solid blue;
+    margin-top: 120px;
+    position: fixed;
+    /* deixar a posição fixa */
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+span {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}   
+
+/* Position sticky  
+    Sticky também faz o elemento ficar fixo na tela;
+    Mas tem um outro comportamento também, quando o elemento volta para a suja 
+    posição original ele se comporta como relative;
+    A posição do elemento é onde ele foi inserido no HTML 
+*/
+
+/* Sticky */
+.sticky {
+    width: 100px;
+    height: 100px;
+    background-color: #994;
+    border: 1px solid green;
+    margin-top: 120px;
+    position: sticky;
+    top: 10px;
+}
+/* z-index 
+    Se temos dois elementos com as mesmas posições ou se eles colidem na 
+    p´gina, podemos escolher qual será exibido;
+    Utilizamos o z-index para isso; 
+    O elemento com maior valor prevalece;
+*/
+
+/* z-index */
+.absolute-3,
+.absolute-4,
+.absolute-5 {
+    width: 50px;
+    height: 50px;
+    background-color: #123;
+    position: absolute;
+}
+
+.absolute-3 {
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.absolute-4 {
+    top: 10px;
+    left: 10px;
+    background-color: #246;
+    z-index: 2;
+}
+
+.absolute-5 {
+    top: 40px;
+    left: 40px;
+    background-color: #453;
+    z-index: 1;
+}
