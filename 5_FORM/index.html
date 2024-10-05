@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- O que é um formulario  
+        Forms tem o papel de receber dados do usuário e enviar
+        para um servidor;
+        Podemos validar dados;
+        As tags mais utilizadas são: form, label e input;
+        A tag form cria o formulario eo delimita;
+        Label descreve os inputs;
+        E o input é a teg que inserimos dados, temos vários 
+        tipos: number, email, text e etc;-->
+
+    <!-- Criando formulario  
+        Para criar um formulário vamos precizar da tag form, que 
+        encapsula todos os elementos do formulário;
+        Dentro dela temos labels e inputs, mas podemos ter outras
+        tags como divs;
+        A tag input tem atributo chamado type, que é onde definimos 
+        o proposito do input
+        Um input do tipo text, recebe dados de texto;-->
+
+    <h2>Formulários HTML</h2>
+    <!-- 1 Primeiro formulario -->
+    <!-- 2 Atributos do formulario -->
+    <form action="register.php" method="GET"> 
+        <div>
+            <label>Nome:</label>
+            <input type="text">
+        </div>
+        <!-- 3 atributo name -->
+        <!-- Atributo name 
+            Utilizamos o atributo name para configurar 
+            os nossos inputs;
+            O valor é ligado ao proposito do input, a sua categoria;
+            Exemplo: Um input que recebe a idade de um usuário, ter 
+            um name com o valor de age/idade;
+            Este atributo é utilizado para pegar o valor quando o 
+            form é enviado para o servidor 
+        -->
+        <div>
+            <!-- 4 atributo label -->
+            <!-- Atributo label 
+                A teg label tem um atributo;
+                E nos utilizamos para linkar com um input, o nome do atributo é for;
+                O valor deve ser o mesmo que o atributo name do atributo que corresponde
+                aquela label;
+                Utilizamos for por propositos semanticos;
+                Isso ajuda o nosso site a ser melhor rankeado no Google; -->
+            <label for="age">Idade:</label>
+            <input type="text" name="age">
+        </div>
+        <!-- 6 select -->
+        <!-- Elementio select 
+            A tag select tem as opções representadas por tags de option;
+            Select também tem um atributo name;
+            O valor estará em cada uma das options, e é issso que recebemos no lado 
+            do  servidor
+            Então temos duas tags para criar um elemento de seleção: select e option; -->
+         <div>
+            <label for="job">Selecione a sua profissão</label>
+            <select name="job">
+                <option value="programador">Programador</option>
+                <option value="tester">Tester/QA</option>
+                <option value="devops">DevOps</option>
+            </select>
+         </div>
+         <!-- 7 atributo selected 
+            Podemos iniciar o nosso input de select com uma opção selecionada;
+            Para isso esta option precisa ter atributo selected;
+            Abordagem interessante para quando temos uma opção muito provavel; -->
+        <div>
+            <label for="contract">Você leu os termos do contrato?</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+        <!-- 8 Multiplas opções -->
+        <div>
+            <label for="items">Selecione os itens desejados:</label>
+            <select name="items" multiple>
+                <option value="pera">Pera</option>
+                <option value="feijao">Feijão</option>
+                <option value="arroz">Arroz</option>
+                <option value="milho">Milho</option>
+            </select>
+        </div>
+        <!-- 9 textarea -->
+        <div>
+            <label for="coment">Escreva abaixo o que vovê achou do post:</label>
+            <textarea name="coment" placeholder="Digite aqui:"></textarea>
+        </div>
+        <!-- 10 fieldset e legend 
+            Fieldset é uma tag para agrupar inputs;
+            E legend é como uma label, que descreve os inputs agrupados; 
+            Utilizamos esta tag para conectar dois ou  mais inputs que tenham o mesmo
+            sentido;
+            Por exemplo: nome e sobrenome;
+        -->
+        
+        <div>
+            <fieldset>
+                <legend>Preencha as suas infomaçõess:</legend>
+                <label for="firstname">Nome:</label>
+                <input type="text" name="firstname">
+                <label for="lastname">Sobrenome:</label>
+                <input type="text" name="lastname">
+            </fieldset>
+        </div>
+
+        <!-- 11 datalist 
+            Datalist é como um select, porém com um autocomplete;
+            Podemos pesquisar por possiveis valores para rpreencher o input;
+            Ou selecionar alguma opção por meio de uma lista;
+            As opções são linkadas poe um atributo chamado list;
+        -->
+        <div>
+            <label for="flavor">Escolha o sabor:</label>
+            <input type="text" list="flavors" name="flavor">
+
+            <datalist id="flavors">
+                <option value="Cereja"></option>
+                <option value="Morango"></option>
+                <option value="Abacaxi"></option>
+                <option value="Chocolate"></option>
+            </datalist>
+        </div>
+
+        <!-- 12 input para senha 
+            Se nó estamos esperando uma senha do usuário, podemos utilizart 
+            a tag input;
+            Porém no atributo type colocamos password;
+            E então o texto passa a ser exibido com *, para mascarar os digitos;
+        -->
+        <div>
+            <label for="password">Digite a sua senha:</label>
+            <input type="password" name="password">
+        </div>
+
+        
+        <!--14 Input radio
+        Este  input é utilizado para selecionar apenas uma opção de varias
+        possibilidades;
+        Por exemplo: O modelo do carrro que esttamos comprando;
+        Não podemos escolher dois, então há a necessidade da decisão entre umas das
+        opções;
+    -->
+    <div>
+        <label for="car-model">Escolha o modelo do seu carro:</label>
+        <div class="radio">
+            <input type="radio" value="bmw" name="car-model">
+            <label for="bmw">BMW 320i</label>
+            <input type="radio" value="vw" name="car-model">
+            <label for="vw">VW JETTA GLI</label>
+            <input type="radio" value="honda" name="car-model">
+            <label for="honda">HONDA CIVIC G10</label>
+        </div>
+    </div>
+
+    <!-- 15 checkbox -->
+    <div>
+        <label for="optionals">Opcionais do carro:</label>
+        <div class="radio">
+            <input type="checkbox" name="optionals[]" value="big_tires">
+            <label for="big_tires">Pneus Grandes</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" name="optionals[]" value="turbo_engine">
+            <label for="turbo_engine">Motor Turbo</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" name="optionals[]" value="hybrid">
+            <label for="hybrid">Híbrido</label>
+        </div>
+    </div> 
+    
+    <!-- 16 input data 
+        O input do tipo date é utilizado para selecionar uma data;
+        Temos um calendario que nos auxilia para datas passadas ou futuras;
+        Podemos também preencher o valor digitado;
+    -->
+    <div>
+        <label for="birthday">Data de nascimento:</label>
+        <input type="date" name="birthday">
+    </div>
+
+    <!-- 17 arquivos -->
+    <div>
+        <label for="image">Insira a sua imagem:</label>
+        <input type="file" name="image">
+    </div>
+
+    <!-- 18 input para numeros 
+        Configurando o type para number temos um input que só aceita dígitos;
+        Este input possui setas, que nos permite alterar o número através de cliques;
+    -->
+    <div>
+        <label for="salary">Quanto você ganha no seu emprego atual?</label>
+        <input type="number" name="salary">
+    </div>
+
+    <!-- 19 inputs para e-mails
+        O input de e-mail é similar ao de texto;
+        Porem quando enviamos o formulario temos uma validação;
+        Que checa se o texto tem o padrão de um e-mail, verificando a @, por exemplo;
+    -->
+    <div>
+        <label for="">Digite seu email:</label>
+        <input type="email" name="email">
+    </div>
+
+    <!-- 20 value -->
+    <div>
+        <label for="value">DIgite algum valor:</label>
+        <input type="text" value="Este é o valor pre definido" name="value">
+    </div>
+
+    <!-- 21 atributo disabled 
+        O atributo disabled é utilizado para bnloquear um input;
+        Então podemos mais digitar neste input;
+        Útil quando não queremos que o usuário preencha um determinado input;
+    -->
+    <div>
+        <p>Tente mudar o valor:</p>
+        <input type="text" disabled>
+    </div>
+
+    <!-- 22 atributo placeholder
+        Como atributo placeholder podemos adicionar dicas para os usuários
+        do sistema;
+        Ela será exibida no propio input;
+        Ao começarmos a preencher com algum valor, a dica some e o nosso valor 
+        que fica sendo exibido;  
+    -->
+    <div>
+        <label for="currentjob">Digite a sua profissão:</label>
+        <input type="text" name="currentjob" placeholder="Digite aqui">
+    </div>
+
+    <!-- 23 atributo required 
+        O atributo required força o preenchimento de algum camopo;
+        Se tentamos enviar o form sem um valor no campo com required, recebemos
+        um alerta da pagina;
+        Isto é um tipo de validação HTML;
+    -->
+    <div>
+        <label for="birthyear">Ano nascimento:</label>
+        <input type="text"  placeholder="Digite o ano em que você nasceu" required>
+    </div>
+
+    <!-- 13 reiniciando o form
+        Podemos reiniciar todos os campos do form;
+        Isso é feito atraves de um input do tipo reset;
+        Ele é um botão, que ao rser clicado limpa o form;  
+    -->
+    <input type="reset" value="Limpar">
+
+        <!-- 5 envio de form -->
+         <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Atributos da tag form 
+        A tag tem dois atributos geralmente,m que são:
+        action: o aquivo/pagina que os dados serão enviados;
+        method: GET ou POST, receber dadoou enviar dado;
+        Não os exploraremos em detalhes pois fazem parte do
+        back-end, ou seja, estão fora do escopo deste curso; 
+    -->
+
+    
+
+</body>
+</html>
