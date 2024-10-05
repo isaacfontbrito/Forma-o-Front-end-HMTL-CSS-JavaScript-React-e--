@@ -1,4 +1,7 @@
 /* reset */
+/* Com o * seleciona todos os elementos 
+e elimina margin e padding e pode trabalhar 
+da forma que quiser */
 * {
     margin: 0;
     padding: 0;
