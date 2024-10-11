@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML SEMANTICO</title>
+
+    <!-- O que é html semântico?
+        Tags de HTML que dão significado ao elemento;
+        Isso ajuda a estruturar melhor nosso site;
+        Contribui para o SEO da nossa página;
+        Exemplos de elementos não  semanticos:div, span;
+        Exemplos de elementos semanticos: main, section, article;
+    -->
+</head>
+<body>
+    <!-- Header 
+        A tag de header é utilizada para um conteudo
+        introdução ou link de navegação;
+        Geralmente tem elementos como: headings, logo, informação
+        do autor do post/pagina;
+        Podemos ter mais de um header por pagina; 
+    -->
+    <!-- 3 header -->
+    <header>
+        <h2>Nosso site</h2>
+        <!-- 5 nav -->
+        <nav>
+           
+            <a href="#">Home</a>
+            <a href="#">Produtos</a>
+            <a href="#">Contatos</a>
+        </nav>
+    </header>
+
+    <!-- main 
+        A tag main é a que contém o conteudo principalda pagina;
+        Não podemos utilizar mais de uma tag main por pagina;
+        O conteudo de main deve ser unico, e não repetido ao longo da pagina;
+    -->
+    <!-- 8 main -->
+    <main>
+        <!-- Section 
+        A tag section define uma seção no documento;
+        Geralmente um agrupamento por categorias, exemplo:seção dos produtos, seção de contato;
+        Provalvelmente um elemento que será utilizado muitas vezesem um projeto; 
+    -->
+    <!-- 1 section -->
+    <section>
+        <h2>Veja os nossos produtos:</h2>
+        <p>Produto 1</p>
+        <p>Produto 2</p>
+        <p>Produto 3</p>
+    </section>
+    <section>
+        <h2>Confira nossos diferenciais:</h2>
+        <ul>
+            <li>Diferencial 1</li>
+            <li>Diferencial 2</li>
+            <li>Diferencial 3</li>
+        </ul>
+    </section>
+
+    <!-- Article 
+        A tag article é utilizada para elementos informativos;
+        Podemos aplicar em: post de blog, comentarios, card de produtos;
+        O conteúdo é individual, não fazendo rrelação com outro elemento ou article;
+        Procurar sobre no MDN https://developer.mozilla.org/pt-BR/
+    -->
+    <!-- 2 article -->
+    <section>
+        <h2>Último posts do blog:</h2>
+        <article>
+            <h3>Post sobre alguma coisa</h3>
+            <p>Descrição do post</p>
+            <a href="#">Ler conteúdo</a>
+        </article>
+    </section>
+    </main>
+    
+    <!-- aside 
+        A tag aside é utilizada para criar conteudos ao lado do conteudo principal;
+        O que fica dentro de aside precisa estar intiretamanete relacionado ao conteudoprincipal;
+        Exemplo: Temos uma lista de produtos sendo exibida, em aside temos os filhos e ordenação; 
+    -->
+    <!-- 6 aside -->
+    <aside>
+        <h4>Categorias</h4>
+        <ul>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Node</a></li>
+        </ul>
+    </aside>
+
+    <!-- 9 mark -->
+    <p>Temos neste texto um <mark>conteudo importante,</mark> que precisa ser marcado.</p>
+
+    <!-- figure e figcaption 
+        As tags figure e figcaption são utilizadas em conjunto;
+        Figure é o elemnento pai, e sua função é exibir alguma imagem na pagina;
+        A imagem é inserida pela tag img;
+        E figcaption serve de legende para a imagem;
+    -->
+    <!-- 7 figure - figcaption -->
+     <figure>
+        <img src="img/lambo.jpg" alt="Lamborghini">
+        <figcaption>Uma Lamborghini Amarela</figcaption>
+     </figure>
+
+    <!-- footer 
+        A tag footer é utilizada como rodapé de página, última seção do site;
+        Mas também pode ser utilizado em outras tags, que precisem deste último elemento;
+        Geralmente contém: informações sobre a empresa, copyright, dados de contato, sitemap;
+    -->
+    <!-- 4 footer -->
+    <footer>
+        <div>
+            <h2>Entre em contato:</h2>
+            <p>Telefone:(xx) xxxxx-xxxx</p>
+            <p>Email:isaac@teste.com</p>
+        </div>
+        <p>Criado por isaac - 2024</p>
+    </footer>
+</body>
+</html>
